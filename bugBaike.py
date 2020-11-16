@@ -7,15 +7,10 @@ from fake_useragent import UserAgent
 
 base_url = "https://baike.baidu.com"
 his = ["/item/%E9%A9%AC%E6%96%B9%E7%BB%BC%E5%90%88%E5%BE%81"]
-headers = {
-    'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-    'Host':'baike.baidu.com',
-    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'
-}
-ua = UserAgent().data_randomize
-header = {
-    'User-Agent':ua
-}
+# 根据自己的浏览器环境配置
+# headers = {
+#
+# }
 def spider():
     for i in range(1000):
         if base_url in his[-1]:
