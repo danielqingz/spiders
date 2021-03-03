@@ -8,7 +8,7 @@ bugBaike.py
 ```
 bugFinReport.py
 ```
-用于爬取东方财富网的研报：基于webdriver，模拟人操作网页的行为，不易被反爬虫。
+用于爬取东方财富网的研报,保存PDF到本地：基于webdriver，模拟人工操作网页的行为，不易被反爬虫。
 
 ```
 bugMedical.py
