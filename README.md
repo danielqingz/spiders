@@ -14,3 +14,5 @@ financial_report_spider.py
 medical_corpus_spider.py
 ```
 用于爬取医学NER名词的中英词对。
+
+考虑到网页的更新，本代码中使用的定位Xpath等需自行确认，建议安装chrome插件`ChroPath`进行查看并修改。
