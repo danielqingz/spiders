@@ -13,10 +13,10 @@ import requests
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('src')
-parser.add_argument('tgt')
-parser.add_argument('start_line', type=int)
-parser.add_argument('total_line', type=int)
+parser.add_argument('src') # src文件路径
+parser.add_argument('tgt') # tgt文件路径
+parser.add_argument('start_line', type=int) # 起始行数
+parser.add_argument('total_line', type=int) # 总行数
 
 args = parser.parse_args()
 
@@ -44,11 +44,11 @@ try:
     while args.total_line is None or i < args.total_line:
         retry = False
         i += 1
-        line = linecache.getline(args.src, i) # src文件路径
+        line = linecache.getline(args.src, i)
         if args.total_line is None and line == "":
             break
         if len(line) >= 2000:
-            out = open(args.tgt, 'a', encoding='utf-8') # tgt文件路径
+            out = open(args.tgt, 'a', encoding='utf-8')
             out.write('\n')
             continue
         elem_src.send_keys(line)
@@ -67,7 +67,7 @@ try:
         else:
             print(cur_value, i)
             outline = cur_value + '\n'
-            out = open(args.tgt, 'a', encoding='utf-8') # tgt文件路径
+            out = open(args.tgt, 'a', encoding='utf-8')
             out.write(outline)
             out.close()
         elem_src.clear()
