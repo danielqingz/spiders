@@ -1,4 +1,7 @@
 # spider——爬虫基础合集
+by Jiaqing Zhang
+
+这是一组基础的网络爬虫python脚本，主要基于urllib及webdriver框架，适合初学者，灵活度高。
 
 ## Basic Function
 
