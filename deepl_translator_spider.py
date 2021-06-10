@@ -32,7 +32,7 @@ try:
     bu1 = driver.find_element_by_xpath(
         "//body/div[2]/div[1]/div[5]/div[3]/div[3]/div[1]/div[2]/div[1]/button[1]").click()
     bu2 = driver.find_element_by_xpath(
-        "//button[contains(text(),'俄语')]").click()
+        "//button[contains(text(),'俄语')]").click() # 可以修改为想要翻译的任意语言（输出），输入语言无需设定，网页会自动判断
     textarea_tgt = driver.find_element_by_xpath(
         "//body[1]/div[2]/div[1]/div[5]/div[3]/div[3]/div[3]/div[1]/div[1]")
     wrong_case = 0
@@ -54,7 +54,7 @@ try:
         elem_src.send_keys(line)
         cur_value = ""
         sample_wrong_case = 0
-        while cur_value == '' or len(cur_value) == 1:
+        while cur_value == '' or len(cur_value) == 1: # 遭遇IP被封禁会进入此循环，不断retry，直到IP解封得到翻译内容
             sample_wrong_case += 1
             time.sleep(3.5)
             cur_value = textarea_tgt.get_attribute('textContent').replace('\n', '').replace('\r', '')
