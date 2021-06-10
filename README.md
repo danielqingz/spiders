@@ -20,7 +20,8 @@ deepl_translator_spider.py
 ```
 用于自动翻译，并爬取结果，使用方法：`python deepl_translator_spider.py input.txt output.txt 1 10000`。
 四个参数分别对应，一个`input.txt`文本中有`10000`行待翻译文件，从第`1`行开始翻译，并输出到文件`output.txt`。
-注：Deepl的反爬虫机制设置了多次访问会暂时封禁IP地址，因此在脚本中设置了`retry`步骤，但若是不想等待IP解封，可尝试VPN等方法切换IP并继续运行脚本，起始行修改为上次截止位置即可。
+
+注：Deepl的反爬虫机制设置了多次访问会暂时封禁IP地址，因此在脚本中设置了`retry`步骤，但若是不想等待IP解封，可尝试VPN等方法切换IP并重启脚本，起始行修改为上次截止位置即可继续爬取。
 
 
 考虑到网页的更新，本代码中使用的定位Xpath等需自行确认，建议安装chrome插件`ChroPath`进行查看并修改。
