@@ -19,7 +19,7 @@ python financial_report_spider.py
 ```
 用于爬取东方财富网的研报,保存PDF到本地：基于webdriver，模拟人工操作网页的行为，不易被反爬虫。
 
-### 医学NER名次对
+### 医学NER中英双语名词对
 
 ```
 python medical_corpus_spider.py
